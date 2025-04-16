@@ -1,0 +1,11 @@
+services:
+  cnn_mnist:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8889:8888"
+    volumes:
+      - .:/app
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
