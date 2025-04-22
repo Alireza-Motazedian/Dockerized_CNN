@@ -14,7 +14,8 @@
 <details>
   <summary><a href="#3-notebook-descriptions"><i><b>3. Notebook Descriptions</b></i></a></summary>
   <div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#31-cnn_mnist-dataipynb">3.1. CNN_MNIST-data.ipynb</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#31-01_data_explorationipynb">3.1. 01_data_exploration.ipynb</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#32-02_model_trainingipynb">3.2. 02_model_training.ipynb</a><br>
   </div>
 </details>
 &nbsp;
@@ -31,31 +32,49 @@
 
 ## 1. Overview
 
-This directory contains Jupyter notebooks for interactive exploration and learning about CNN-based MNIST digit recognition.
+This directory contains Jupyter notebooks for interactive exploration, learning, and implementation of CNN-based MNIST digit recognition.
 
 ## 2. Directory Contents
 
 ```
 Folder PATH listing
 .
-+---CNN_MNIST-data.ipynb       <-- Main notebook for the project
++---01_data_exploration.ipynb  <-- Data exploration and visualization notebook
++---02_model_training.ipynb    <-- Model training and evaluation notebook
++---figures/                   <-- Generated visualizations
++---models/                    <-- Saved models and model outputs
 +---README.md                  <-- This documentation file
 ```
 
 ## 3. Notebook Descriptions
 
-### 3.1 CNN_MNIST-data.ipynb
+### 3.1 01_data_exploration.ipynb
 
-The main notebook for the project that covers the complete workflow:
+A comprehensive notebook dedicated to exploring and understanding the MNIST dataset:
 
-- Loading and preprocessing the MNIST dataset
+- Loading and inspecting the MNIST dataset
+- Visualizing sample images from each digit class
+- Analyzing class distributions and balance
+- Exploring image characteristics (pixel distributions, average digits)
+- Examining digit variations and morphology
+- Performing dimensionality reduction (t-SNE, PCA)
+- Preprocessing the data for CNN modeling (normalization, reshaping)
+- Creating and visualizing training/validation/test splits
+
+This notebook provides a thorough foundation for understanding the data before model development.
+
+### 3.2 02_model_training.ipynb
+
+The model implementation and training notebook covering:
+
 - Building a CNN model for digit recognition
 - Training the model with appropriate techniques
 - Evaluating model performance
 - Visualizing results and learned features
 - Comparing CNN with traditional neural networks
+- Experimenting with different architectures and hyperparameters
 
-This notebook is designed to be self-contained and educational, with detailed explanations of each step.
+This notebook demonstrates the complete modeling workflow from architecture design to final evaluation.
 
 ## 4. Using the Notebooks
 
@@ -64,7 +83,7 @@ This notebook is designed to be self-contained and educational, with detailed ex
    docker-compose up
    ```
 
-2. Access Jupyter Lab in your browser at http://localhost:8888
+2. Access Jupyter Lab in your browser at http://localhost:8889
 
 3. Navigate to the notebooks directory and open the desired notebook
 
@@ -73,6 +92,8 @@ This notebook is designed to be self-contained and educational, with detailed ex
 ## 5. Learning Objectives
 
 Through these notebooks, you will learn:
+- How to properly explore and visualize image datasets
+- Data preprocessing techniques for deep learning
 - How to implement a CNN using TensorFlow/Keras
 - The advantages of CNNs over traditional neural networks for image tasks
 - Techniques for training and evaluating deep learning models

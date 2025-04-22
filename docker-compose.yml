@@ -1,11 +1,16 @@
 services:
-  cnn_mnist:
-    build: 
+  mnist-ann-project:
+    build:
       context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8889:8888"
+      args:
+        - KERNEL_NAME=${PROJECT_NAME:-mnist-ann-project}
+    image: ${PROJECT_NAME:-mnist-ann-project}
+    container_name: ${PROJECT_NAME:-mnist-ann-project}
     volumes:
       - .:/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "8888:8888" # Jupyter Notebook
     environment:
-      - JUPYTER_ENABLE_LAB=yes
+      - KERNEL_NAME=${PROJECT_NAME:-mnist-ann-project}

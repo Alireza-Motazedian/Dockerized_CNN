@@ -1,19 +1,13 @@
 #!/bin/bash
 
-# Use relative paths for directories since we're using volume mounting
-# Check if data directories exist
-echo "Creating data directories if they don't exist..."
-mkdir -p ./data/mnist
-mkdir -p ./data/mnist_samples
+# Get the parent directory name
+PROJECT_NAME=$(basename "$(pwd)")
 
-# Check if models directory exists
-echo "Creating models directory if it doesn't exist..."
-mkdir -p ./models
+# Convert the project name to lowercase
+PROJECT_NAME_LOWER=$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]')
 
-# Check if figures directory exists
-echo "Creating figures directory if it doesn't exist..."
-mkdir -p ./figures
+# Export the lowercase project name as an environment variable
+export PROJECT_NAME=$PROJECT_NAME_LOWER
 
-# Run Jupyter lab by default
-echo "Starting Jupyter Lab..."
-jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+# Build and run the Docker Compose in detached mode
+docker-compose up --build -d
