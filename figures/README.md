@@ -44,6 +44,7 @@ Folder PATH listing
 +---simple_cnn_misclassified.png <-- Misclassified examples by simple CNN
 +---simple_cnn_training_history.png <-- Training metrics for simple CNN model
 +---training_history.png       <-- Training and validation metrics over epochs
++---Banner_CNN.png             <-- Project banner image for documentation and visualization
 ```
 
 The directory contains both visualizations from the original CNN implementation and a simpler CNN architecture for comparison. Note that some files may be generated when you run the corresponding scripts or notebooks.
@@ -64,6 +65,9 @@ Visualizations of the CNN's internal representations (activations) for sample in
 
 ### 3.5 Prediction Samples (prediction_samples.png & simple_cnn_misclassified.png)
 A grid of example predictions from the model, including both correct and incorrect classifications. For each example, the true label and predicted label are shown, helping to understand the types of digits the model struggles with. The simple_cnn_misclassified.png specifically focuses on digits that were incorrectly classified by the simple CNN model.
+
+### 3.6 Project Banner (Banner_CNN.png)
+A banner image designed for use in project documentation, presentations, or repository visuals. It provides a visual summary or branding for the CNN MNIST project, making documentation and README files more visually appealing and professional.
 
 ## 4. Generating Visualizations
 
